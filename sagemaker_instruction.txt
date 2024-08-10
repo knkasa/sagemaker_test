@@ -1,0 +1,22 @@
+1. Access SageMaker in AWS console.
+2. Choose Region.
+3. From left pane, click Domains, Create Domain. 
+  (If you want to delete domains, make sure you to delete users, space, etc, then delete button will appear (scroll down))
+4. From left pane, click Studio, choose your domain and click "then Open Studio"
+5. Once you are in JupyterLab, from upper right, click "Create JpyterLab space". 
+  Choose instance type of your choice.
+6. Once created, click run, then hit "Open".  
+  ***Note: You must Stop the instance when you're done, otherwise, they will charge when running.
+  If you want to delete files, folders, you can do so in terminal.
+
+8. When you are done, delete the endpoint.
+  If you did not delete the endpoint, but closed the jupyterlab notebook, you can delete from sagemaker webpage, "inference section".
+  
+9. From you local, run inference.py
+  Before you do, create IAM users from AWS console. No console access. No need to set policy here.
+  Click the created user, from security credentials, click below "create access key".  Choose "Local code" access. Descriptive tag value can be anything.
+  Click the user, click "Add permissions", add "AmazonSageMakerFullAccess" policy for this user.
+  If using Root user, get security credential(from upper right username in AWS console).
+  Use those to run boto3.
+  
+  
